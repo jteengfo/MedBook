@@ -2,6 +2,6 @@
 it's a simple app that lets users add meds for tracking purposes 
 
 ## Storyboard Sequence
-[FIGMA_LINK] (https://www.figma.com/file/CX26Le1djtNIT1j7jZcEBn/MedBook)
+[FIGMALINK](https://www.figma.com/file/CX26Le1djtNIT1j7jZcEBn/MedBook)
 
-![Storyboard Sequence image] (MedBook storyboard sequence.PNG)
+![Storyboard Sequence image](MedBook storyboard sequence.PNG)
