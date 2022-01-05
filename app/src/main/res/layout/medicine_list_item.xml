@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/border"
+    android:id="@+id/parent">
+
+    <TextView
+        android:id="@+id/txtViewMedicineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine Name"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewDateStarted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtViewDoseAmt"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/txtViewDoseAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dose Amount"
+        app:layout_constraintStart_toEndOf="@+id/txtViewMedicineName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="125dp"/>
+
+    <TextView
+        android:id="@+id/txtViewFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequency"
+        app:layout_constraintStart_toStartOf="@+id/txtViewDoseAmt"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewDoseAmt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtViewDateStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Started"
+        app:layout_constraintStart_toStartOf="@+id/txtViewFrequency"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewFrequency"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="Dose Amount: "
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewDoseAmt"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewDoseAmt"
+        app:layout_constraintTop_toTopOf="@+id/txtViewDoseAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Frequency:"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewFrequency"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewFrequency"
+        app:layout_constraintTop_toTopOf="@+id/txtViewFrequency" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Started"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewDateStarted"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewDateStarted"
+        app:layout_constraintTop_toTopOf="@+id/txtViewDateStarted" />
+</androidx.constraintlayout.widget.ConstraintLayout>

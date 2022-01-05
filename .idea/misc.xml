@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/MedBook/MedBook/app/src/main/res/drawable/border.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/MedBook/MedBook/app/src/main/res/layout/activity_add_medicine.xml" value="0.264" />
+        <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/MedBook/MedBook/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/MedBook/MedBook/app/src/main/res/layout/activity_medicine.xml" value="0.264" />
+        <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/MedBook/MedBook/app/src/main/res/layout/medicine_list_item.xml" value="0.264" />
         <entry key="..\:/Users/JamesAngeloTeEngFo/Desktop/Projects/MedBook/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>

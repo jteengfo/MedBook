@@ -1,8 +1,9 @@
 package com.example.medbook;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Medicine {
+public class Medicine implements Serializable {
 
     // Initialize medicine attributes
     private String name;

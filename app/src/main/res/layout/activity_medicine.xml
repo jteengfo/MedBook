@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicineActivity">
+
+    <ImageButton
+        android:id="@+id/imgBtn_backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/medicineCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:id="@+id/txtView_medicineInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine Info"
+        android:textSize="34sp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBtn_backBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBtn_backBtn" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/medicineCardView"
+        android:layout_width="306dp"
+        android:layout_height="441dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.32999998"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgBtn_editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/txtView_medicineName_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Medicine Name"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:text="Dose Amount"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintStart_toStartOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/txtView_medicineName_cardView" />
+
+            <TextView
+                android:id="@+id/txtView_doseAmt_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
+                android:text="10"
+                android:textSize="27sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtView_doseUnit_cardView"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/txtView_doseUnit_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mg"
+                android:textSize="27sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtView_doseAmt_cardView"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtView_doseAmt_cardView"
+                app:layout_constraintTop_toTopOf="@+id/txtView_doseAmt_cardView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:text="Daily Frequency"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintStart_toStartOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/txtView_dailyFreq_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="27sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:text="Date Started"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintStart_toStartOf="@+id/txtView_medicineName_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/txtView_dateStarted_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1111/22/3"
+                android:textSize="27sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="113dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
