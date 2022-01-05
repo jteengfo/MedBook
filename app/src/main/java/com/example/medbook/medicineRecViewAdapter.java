@@ -16,8 +16,9 @@ public class medicineRecViewAdapter extends RecyclerView.Adapter<medicineRecView
 
     // initialize an arrayList to contain different medicine
     private ArrayList<Medicine> medicineArrayList = new ArrayList<>();
+    private OnMedicineListener onMedicineListener;
 
-    SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     String dateString;
 
 
@@ -27,7 +28,9 @@ public class medicineRecViewAdapter extends RecyclerView.Adapter<medicineRecView
         notifyDataSetChanged();
     }
 
-    public medicineRecViewAdapter() {
+    public medicineRecViewAdapter(OnMedicineListener onMedicineListener) {
+        this.onMedicineListener = onMedicineListener;
+
     }
 
     // purpose is to create an instance of the viewHolder class for every item in the recycler view
@@ -37,7 +40,7 @@ public class medicineRecViewAdapter extends RecyclerView.Adapter<medicineRecView
 
         // first is to create a view to create a viewHolder class
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.medicine_list_item, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, onMedicineListener);
     }
 
     @Override
@@ -66,8 +69,11 @@ public class medicineRecViewAdapter extends RecyclerView.Adapter<medicineRecView
         private TextView txtFrequency;
         private TextView txtDateStarted;
         private ConstraintLayout parent;
+        private OnMedicineListener onMedicineListener;
 
-        public ViewHolder(@NonNull View itemView) {
+
+
+        public ViewHolder(@NonNull View itemView, OnMedicineListener onMedicineListener) {
             super(itemView);
 
             // can't use findViewById because not inside an activity. Instead we are inside
@@ -77,8 +83,15 @@ public class medicineRecViewAdapter extends RecyclerView.Adapter<medicineRecView
             txtFrequency = itemView.findViewById(R.id.txtViewFrequency);
             txtDateStarted = itemView.findViewById(R.id.txtViewDateStarted);
             parent = itemView.findViewById(R.id.parent);
+            this.onMedicineListener = onMedicineListener;
+
+            itemView.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            onMedicineListener.onMedicineClick(getAdapterPosition());
+        }
     }
     // create interface
     public interface OnMedicineListener {

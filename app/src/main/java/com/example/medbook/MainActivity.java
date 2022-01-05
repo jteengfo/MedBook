@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements medicineRecViewAd
         medicineRecView = findViewById(R.id.medicineRecyclerView);
         addButton = findViewById(R.id.addButton);
 
-        adapter = new medicineRecViewAdapter();
+        adapter = new medicineRecViewAdapter(this);
         medicineRecView.setAdapter(adapter);
         medicineRecView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -83,8 +83,11 @@ public class MainActivity extends AppCompatActivity implements medicineRecViewAd
 
     @Override
     public void onMedicineClick(int position) {
-        medicineArrayList.get(position);
         Intent intent = new Intent(this, MedicineActivity.class);
+        Medicine medicine = medicineArrayList.get(position);
+        System.out.println(medicine.getName());
+        intent.putExtra("medicineObject", medicine);
+
         startActivity(intent);
     }
 }
